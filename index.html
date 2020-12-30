@@ -66,8 +66,8 @@
   
     <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/04/29/hello-world/" class="article-date">
-  <time datetime="2020-04-29T02:32:40.894Z" itemprop="datePublished">2020-04-29</time>
+    <a href="/2020/12/30/hello-world/" class="article-date">
+  <time datetime="2020-12-30T08:19:43.886Z" itemprop="datePublished">2020-12-30</time>
 </a>
     
   </div>
@@ -78,7 +78,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/29/hello-world/">Hello World</a>
+      <a class="article-title" href="/2020/12/30/hello-world/">Hello World</a>
     </h1>
   
 
@@ -103,7 +103,204 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/04/29/hello-world/" data-id="ck9kq5itl00003ohk1xelcule" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/12/30/hello-world/" data-id="ckjb5fdjs000025n2djhi8jng" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-mac_grafana" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/12/30/mac_grafana/" class="article-date">
+  <time datetime="2020-12-30T08:19:43.886Z" itemprop="datePublished">2020-12-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/12/30/mac_grafana/">mac_grafana</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="什么是Grafana？"><a href="#什么是Grafana？" class="headerlink" title="什么是Grafana？"></a>什么是Grafana？</h2><p>Grafana是开源的可视化和分析软件。它使您可以查询，可视化，警报和浏览指标，无论它们存储在哪里。它为您提供了将时间序列数据库（TSDB）数据转换为精美的图形和可视化效果的工具。</p>
+<h2 id="安装方式"><a href="#安装方式" class="headerlink" title="安装方式"></a>安装方式</h2><p>安装地址：<a href="https://grafana.com/docs/grafana/latest/installation/" target="_blank" rel="noopener">https://grafana.com/docs/grafana/latest/installation/</a></p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install grafana</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 默认配置文件位置 注意：必须重新启动Grafana才能使所有配置更改生效。</span></span><br><span class="line">/usr/<span class="built_in">local</span>/etc/grafana/grafana.ini</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 默认端口</span></span><br><span class="line">3000</span><br><span class="line"></span><br><span class="line"><span class="comment"># 默认用户名和密码</span></span><br><span class="line">admin admin</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew services start grafana</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">浏览器打开: 127.0.0.1:3000</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="相关命令"><a href="#相关命令" class="headerlink" title="相关命令"></a>相关命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// start service</span><br><span class="line">brew services start grafana</span><br><span class="line">// stop service</span><br><span class="line">brew services stop grafana</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/12/30/mac_grafana/" data-id="ckjb5fdk0000125n26v2d9c32" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-mac_prometheus" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/12/30/mac_prometheus/" class="article-date">
+  <time datetime="2020-12-30T08:19:43.886Z" itemprop="datePublished">2020-12-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/12/30/mac_prometheus/">mac_prometheus</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="安装方式"><a href="#安装方式" class="headerlink" title="安装方式"></a>安装方式</h2><p>安装地址 ：<a href="https://prometheus.io/download/" target="_blank" rel="noopener">https://prometheus.io/download/</a></p>
+<ul>
+<li>预编译的二进制文件</li>
+<li>docker</li>
+<li>brew</li>
+<li>源代码</li>
+</ul>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install prometheus</span><br></pre></td></tr></table></figure>
+
+<h2 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew services start prometheus</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 默认配置文件地址</span></span><br><span class="line">/usr/<span class="built_in">local</span>/etc/prometheus.yml</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">浏览器打开: localhost:9090</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="结合-node-exporter-机器指标导出器"><a href="#结合-node-exporter-机器指标导出器" class="headerlink" title="结合 node_exporter (机器指标导出器)"></a>结合 node_exporter (机器指标导出器)</h2><h3 id="安装-node-exporter"><a href="#安装-node-exporter" class="headerlink" title="安装 node_exporter"></a>安装 node_exporter</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install node_exporter</span><br></pre></td></tr></table></figure>
+
+<h3 id="启动-1"><a href="#启动-1" class="headerlink" title="启动"></a>启动</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew services start node_exporter</span><br></pre></td></tr></table></figure>
+
+<h3 id="测试-1"><a href="#测试-1" class="headerlink" title="测试"></a>测试</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">浏览器打开:localhost:9100</span><br></pre></td></tr></table></figure>
+
+<h3 id="prometheus-集成-node-exporter"><a href="#prometheus-集成-node-exporter" class="headerlink" title="prometheus 集成 node_exporter"></a>prometheus 集成 node_exporter</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">vim /usr/<span class="built_in">local</span>/etc/prometheus.yml</span><br><span class="line"></span><br><span class="line"><span class="comment"># 加入如下配置项 采集node exporter监控数据</span></span><br><span class="line">  - job_name: <span class="string">"node_exporter"</span></span><br><span class="line">    static_configs:</span><br><span class="line">    - targets: [<span class="string">"localhost:9100"</span>]</span><br></pre></td></tr></table></figure>
+
+<h3 id="重启prometheus"><a href="#重启prometheus" class="headerlink" title="重启prometheus"></a>重启prometheus</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew services restart prometheus</span><br></pre></td></tr></table></figure>
+
+<p>稍过几秒, prometheus 可视化可以看到收集到的机器节点信息</p>
+<h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看brew service 状态</span></span><br><span class="line">brew services list</span><br><span class="line"></span><br><span class="line"><span class="comment"># 停止 node_exporter service</span></span><br><span class="line">brew services stop node_exporter</span><br></pre></td></tr></table></figure>
+
+
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/12/30/mac_prometheus/" data-id="ckjb5fdk2000225n274kf2dxz" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-spring_boot_prometheus_grafana" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/12/30/spring_boot_prometheus_grafana/" class="article-date">
+  <time datetime="2020-12-30T08:19:43.886Z" itemprop="datePublished">2020-12-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/12/30/spring_boot_prometheus_grafana/">spring_boot_prometheus_grafana</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Spring Boot 支持 prometheus 监控：文档地址-&gt; <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-features.html#production-ready-metrics-export-prometheus" target="_blank" rel="noopener">这儿</a></p>
+<h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>spring-boot-starter-actuator 组件支持生成符合  prometheus 数据格式的 metric</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="build-gradle"><a href="#build-gradle" class="headerlink" title="build.gradle"></a>build.gradle</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># build.gradle</span></span><br><span class="line"></span><br><span class="line">implementation <span class="string">'org.springframework.boot:spring-boot-starter-actuator'</span></span><br><span class="line">implementation <span class="string">'io.micrometer:micrometer-registry-prometheus'</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="修改Spring配置文件"><a href="#修改Spring配置文件" class="headerlink" title="修改Spring配置文件"></a>修改Spring配置文件</h3><p>修改Spring 配置文件，使 Spring 项目暴露 metric 接口<br><a href="https://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-features.html#production-ready-endpoints" target="_blank" rel="noopener">https://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-features.html#production-ready-endpoints</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># application.yml</span></span><br><span class="line">management:</span><br><span class="line">  endpoints:</span><br><span class="line">    web:</span><br><span class="line">      exposure:</span><br><span class="line">        include:  <span class="string">'*'</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="集成prometheus"><a href="#集成prometheus" class="headerlink" title="集成prometheus"></a>集成prometheus</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 修改prometheus 配置文件，收集Spring metric</span></span><br><span class="line">vim /usr/<span class="built_in">local</span>/etc/prometheus.yml</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 将以下SpringBoot应用配置加入prometheus.yml 尾部</span></span><br><span class="line"></span><br><span class="line">  - job_name: <span class="string">'springBootPrometheus'</span></span><br><span class="line">    scrape_interval: 5s</span><br><span class="line">    metrics_path: <span class="string">'/actuator/prometheus'</span></span><br><span class="line">    static_configs:</span><br><span class="line">    - targets: [<span class="string">'127.0.0.1:6666'</span>]</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#重启 prometheus                </span></span><br><span class="line">brew services restart prometheus</span><br></pre></td></tr></table></figure>
+
+<p>此时打开 <a href="http://localhost:9090/targets" target="_blank" rel="noopener">http://localhost:9090/targets</a> 可以看到 springBootPrometheus</p>
+<p>![image-20201216102113830](/Users/spaco/Library/Application Support/typora-user-images/image-20201216102113830.png)</p>
+<h2 id="集成Grafana"><a href="#集成Grafana" class="headerlink" title="集成Grafana"></a>集成Grafana</h2><p>prometheus 的可视化功能不如 Grafana 强大，所以我们可以集成 Grafana 可视化功能</p>
+<p>可以通过 <a href="https://grafana.com/grafana/dashboards" target="_blank" rel="noopener">https://grafana.com/grafana/dashboards</a> 搜索你需要的可视化 dashboards</p>
+<p>这里我们使用  <a href="https://grafana.com/grafana/dashboards/4701" target="_blank" rel="noopener">JVM (Micrometer)</a> 和 <a href="https://grafana.com/grafana/dashboards/6756" target="_blank" rel="noopener">Spring Boot Statistics</a></p>
+<h3 id="JVM-Micrometer"><a href="#JVM-Micrometer" class="headerlink" title="JVM (Micrometer)"></a>JVM (Micrometer)</h3><p>JVM 相关信息可视化</p>
+<h4 id="获取模版id"><a href="#获取模版id" class="headerlink" title="获取模版id"></a>获取模版id</h4><p><a href="https://grafana.com/grafana/dashboards/4701" target="_blank" rel="noopener">JVM (Micrometer)</a> </p>
+<p>![image-20201216103346037](/Users/spaco/Library/Application Support/typora-user-images/image-20201216103346037.png)</p>
+<p>模版id: 4701</p>
+<h4 id="import-dashbord"><a href="#import-dashbord" class="headerlink" title="import dashbord"></a>import dashbord</h4><p>![image-20201216103511332](/Users/spaco/Library/Application Support/typora-user-images/image-20201216103511332.png)</p>
+<p>![image-20201216103542115](/Users/spaco/Library/Application Support/typora-user-images/image-20201216103542115.png)</p>
+<h4 id="设置-dashbord-数据源"><a href="#设置-dashbord-数据源" class="headerlink" title="设置 dashbord 数据源"></a>设置 dashbord 数据源</h4><p>![image-20201216103634959](/Users/spaco/Library/Application Support/typora-user-images/image-20201216103634959.png)</p>
+<p>点击 Import 按钮, 会跳转到 JVM 数据页面</p>
+<p>![image-20201216103825240](/Users/spaco/Library/Application Support/typora-user-images/image-20201216103825240.png)</p>
+<h3 id="Spring-Boot-Statistics"><a href="#Spring-Boot-Statistics" class="headerlink" title="Spring Boot Statistics"></a><em>Spring Boot Statistics</em></h3><p>展示Spring Boot 项目的相关信息</p>
+<h4 id="获取模版id-1"><a href="#获取模版id-1" class="headerlink" title="获取模版id"></a>获取模版id</h4><p> <a href="https://grafana.com/grafana/dashboards/6756" target="_blank" rel="noopener">Spring Boot Statistics</a></p>
+<p>模版id: 6756</p>
+<p>![image-20201216103954627](/Users/spaco/Library/Application Support/typora-user-images/image-20201216103954627.png)</p>
+<h4 id="import-dashbord-1"><a href="#import-dashbord-1" class="headerlink" title="import dashbord"></a>import dashbord</h4><p>同上</p>
+<p>####设置 dashbord 数据源  </p>
+<p>同上</p>
+<p>会跳转到如下页面</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/12/30/spring_boot_prometheus_grafana/" data-id="ckjb5fdk3000325n26osw24a4" class="article-share-link">Share</a>
       
       
     </footer>
@@ -131,7 +328,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li></ul>
     </div>
   </div>
 
@@ -144,7 +341,19 @@
       <ul>
         
           <li>
-            <a href="/2020/04/29/hello-world/">Hello World</a>
+            <a href="/2020/12/30/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/30/mac_grafana/">mac_grafana</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/30/mac_prometheus/">mac_prometheus</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/30/spring_boot_prometheus_grafana/">spring_boot_prometheus_grafana</a>
           </li>
         
       </ul>

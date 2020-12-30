@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>spring_boot_prometheus_grafana | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Spring Boot 支持 prometheus 监控：文档地址-&gt; 这儿 原理spring-boot-starter-actuator 组件支持生成符合  prometheus 数据格式的 metric 安装build.gradle1234# build.gradleimplementation &#39;org.springframework.boot:spring-boot-starter-">
+<meta property="og:type" content="article">
+<meta property="og:title" content="spring_boot_prometheus_grafana">
+<meta property="og:url" content="http://yoursite.com/2020/12/30/spring_boot_prometheus_grafana/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Spring Boot 支持 prometheus 监控：文档地址-&gt; 这儿 原理spring-boot-starter-actuator 组件支持生成符合  prometheus 数据格式的 metric 安装build.gradle1234# build.gradleimplementation &#39;org.springframework.boot:spring-boot-starter-">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-12-30T08:19:43.886Z">
+<meta property="article:modified_time" content="2020-12-30T08:19:43.886Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-spring_boot_prometheus_grafana" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/12/30/spring_boot_prometheus_grafana/" class="article-date">
+  <time datetime="2020-12-30T08:19:43.886Z" itemprop="datePublished">2020-12-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      spring_boot_prometheus_grafana
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Spring Boot 支持 prometheus 监控：文档地址-&gt; <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-features.html#production-ready-metrics-export-prometheus" target="_blank" rel="noopener">这儿</a></p>
+<h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>spring-boot-starter-actuator 组件支持生成符合  prometheus 数据格式的 metric</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="build-gradle"><a href="#build-gradle" class="headerlink" title="build.gradle"></a>build.gradle</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># build.gradle</span></span><br><span class="line"></span><br><span class="line">implementation <span class="string">'org.springframework.boot:spring-boot-starter-actuator'</span></span><br><span class="line">implementation <span class="string">'io.micrometer:micrometer-registry-prometheus'</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="修改Spring配置文件"><a href="#修改Spring配置文件" class="headerlink" title="修改Spring配置文件"></a>修改Spring配置文件</h3><p>修改Spring 配置文件，使 Spring 项目暴露 metric 接口<br><a href="https://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-features.html#production-ready-endpoints" target="_blank" rel="noopener">https://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-features.html#production-ready-endpoints</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># application.yml</span></span><br><span class="line">management:</span><br><span class="line">  endpoints:</span><br><span class="line">    web:</span><br><span class="line">      exposure:</span><br><span class="line">        include:  <span class="string">'*'</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="集成prometheus"><a href="#集成prometheus" class="headerlink" title="集成prometheus"></a>集成prometheus</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 修改prometheus 配置文件，收集Spring metric</span></span><br><span class="line">vim /usr/<span class="built_in">local</span>/etc/prometheus.yml</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 将以下SpringBoot应用配置加入prometheus.yml 尾部</span></span><br><span class="line"></span><br><span class="line">  - job_name: <span class="string">'springBootPrometheus'</span></span><br><span class="line">    scrape_interval: 5s</span><br><span class="line">    metrics_path: <span class="string">'/actuator/prometheus'</span></span><br><span class="line">    static_configs:</span><br><span class="line">    - targets: [<span class="string">'127.0.0.1:6666'</span>]</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#重启 prometheus                </span></span><br><span class="line">brew services restart prometheus</span><br></pre></td></tr></table></figure>
+
+<p>此时打开 <a href="http://localhost:9090/targets" target="_blank" rel="noopener">http://localhost:9090/targets</a> 可以看到 springBootPrometheus</p>
+<p>![image-20201216102113830](/Users/spaco/Library/Application Support/typora-user-images/image-20201216102113830.png)</p>
+<h2 id="集成Grafana"><a href="#集成Grafana" class="headerlink" title="集成Grafana"></a>集成Grafana</h2><p>prometheus 的可视化功能不如 Grafana 强大，所以我们可以集成 Grafana 可视化功能</p>
+<p>可以通过 <a href="https://grafana.com/grafana/dashboards" target="_blank" rel="noopener">https://grafana.com/grafana/dashboards</a> 搜索你需要的可视化 dashboards</p>
+<p>这里我们使用  <a href="https://grafana.com/grafana/dashboards/4701" target="_blank" rel="noopener">JVM (Micrometer)</a> 和 <a href="https://grafana.com/grafana/dashboards/6756" target="_blank" rel="noopener">Spring Boot Statistics</a></p>
+<h3 id="JVM-Micrometer"><a href="#JVM-Micrometer" class="headerlink" title="JVM (Micrometer)"></a>JVM (Micrometer)</h3><p>JVM 相关信息可视化</p>
+<h4 id="获取模版id"><a href="#获取模版id" class="headerlink" title="获取模版id"></a>获取模版id</h4><p><a href="https://grafana.com/grafana/dashboards/4701" target="_blank" rel="noopener">JVM (Micrometer)</a> </p>
+<p>![image-20201216103346037](/Users/spaco/Library/Application Support/typora-user-images/image-20201216103346037.png)</p>
+<p>模版id: 4701</p>
+<h4 id="import-dashbord"><a href="#import-dashbord" class="headerlink" title="import dashbord"></a>import dashbord</h4><p>![image-20201216103511332](/Users/spaco/Library/Application Support/typora-user-images/image-20201216103511332.png)</p>
+<p>![image-20201216103542115](/Users/spaco/Library/Application Support/typora-user-images/image-20201216103542115.png)</p>
+<h4 id="设置-dashbord-数据源"><a href="#设置-dashbord-数据源" class="headerlink" title="设置 dashbord 数据源"></a>设置 dashbord 数据源</h4><p>![image-20201216103634959](/Users/spaco/Library/Application Support/typora-user-images/image-20201216103634959.png)</p>
+<p>点击 Import 按钮, 会跳转到 JVM 数据页面</p>
+<p>![image-20201216103825240](/Users/spaco/Library/Application Support/typora-user-images/image-20201216103825240.png)</p>
+<h3 id="Spring-Boot-Statistics"><a href="#Spring-Boot-Statistics" class="headerlink" title="Spring Boot Statistics"></a><em>Spring Boot Statistics</em></h3><p>展示Spring Boot 项目的相关信息</p>
+<h4 id="获取模版id-1"><a href="#获取模版id-1" class="headerlink" title="获取模版id"></a>获取模版id</h4><p> <a href="https://grafana.com/grafana/dashboards/6756" target="_blank" rel="noopener">Spring Boot Statistics</a></p>
+<p>模版id: 6756</p>
+<p>![image-20201216103954627](/Users/spaco/Library/Application Support/typora-user-images/image-20201216103954627.png)</p>
+<h4 id="import-dashbord-1"><a href="#import-dashbord-1" class="headerlink" title="import dashbord"></a>import dashbord</h4><p>同上</p>
+<p>####设置 dashbord 数据源  </p>
+<p>同上</p>
+<p>会跳转到如下页面</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/12/30/spring_boot_prometheus_grafana/" data-id="ckjb5fdk3000325n26osw24a4" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/12/30/mac_prometheus/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          mac_prometheus
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/12/30/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/30/mac_grafana/">mac_grafana</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/30/mac_prometheus/">mac_prometheus</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/30/spring_boot_prometheus_grafana/">spring_boot_prometheus_grafana</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>mac_grafana | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="什么是Grafana？Grafana是开源的可视化和分析软件。它使您可以查询，可视化，警报和浏览指标，无论它们存储在哪里。它为您提供了将时间序列数据库（TSDB）数据转换为精美的图形和可视化效果的工具。 安装方式安装地址：https:&#x2F;&#x2F;grafana.com&#x2F;docs&#x2F;grafana&#x2F;latest&#x2F;installation&#x2F; 安装1brew install grafana  12345678#">
+<meta property="og:type" content="article">
+<meta property="og:title" content="mac_grafana">
+<meta property="og:url" content="http://yoursite.com/2020/12/30/mac_grafana/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="什么是Grafana？Grafana是开源的可视化和分析软件。它使您可以查询，可视化，警报和浏览指标，无论它们存储在哪里。它为您提供了将时间序列数据库（TSDB）数据转换为精美的图形和可视化效果的工具。 安装方式安装地址：https:&#x2F;&#x2F;grafana.com&#x2F;docs&#x2F;grafana&#x2F;latest&#x2F;installation&#x2F; 安装1brew install grafana  12345678#">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-12-30T08:19:43.886Z">
+<meta property="article:modified_time" content="2020-12-30T08:19:43.886Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-mac_grafana" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/12/30/mac_grafana/" class="article-date">
+  <time datetime="2020-12-30T08:19:43.886Z" itemprop="datePublished">2020-12-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      mac_grafana
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="什么是Grafana？"><a href="#什么是Grafana？" class="headerlink" title="什么是Grafana？"></a>什么是Grafana？</h2><p>Grafana是开源的可视化和分析软件。它使您可以查询，可视化，警报和浏览指标，无论它们存储在哪里。它为您提供了将时间序列数据库（TSDB）数据转换为精美的图形和可视化效果的工具。</p>
+<h2 id="安装方式"><a href="#安装方式" class="headerlink" title="安装方式"></a>安装方式</h2><p>安装地址：<a href="https://grafana.com/docs/grafana/latest/installation/" target="_blank" rel="noopener">https://grafana.com/docs/grafana/latest/installation/</a></p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install grafana</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 默认配置文件位置 注意：必须重新启动Grafana才能使所有配置更改生效。</span></span><br><span class="line">/usr/<span class="built_in">local</span>/etc/grafana/grafana.ini</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 默认端口</span></span><br><span class="line">3000</span><br><span class="line"></span><br><span class="line"><span class="comment"># 默认用户名和密码</span></span><br><span class="line">admin admin</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew services start grafana</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">浏览器打开: 127.0.0.1:3000</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="相关命令"><a href="#相关命令" class="headerlink" title="相关命令"></a>相关命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// start service</span><br><span class="line">brew services start grafana</span><br><span class="line">// stop service</span><br><span class="line">brew services stop grafana</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/12/30/mac_grafana/" data-id="ckjb5fdk0000125n26v2d9c32" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/12/30/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Hello World
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/12/30/mac_prometheus/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">mac_prometheus</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/12/30/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/30/mac_grafana/">mac_grafana</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/30/mac_prometheus/">mac_prometheus</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/30/spring_boot_prometheus_grafana/">spring_boot_prometheus_grafana</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

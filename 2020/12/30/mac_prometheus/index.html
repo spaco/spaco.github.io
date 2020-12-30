@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>mac_prometheus | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="安装方式安装地址 ：https:&#x2F;&#x2F;prometheus.io&#x2F;download&#x2F;  预编译的二进制文件 docker brew 源代码  安装1brew install prometheus  启动1brew services start prometheus  12# 默认配置文件地址&#x2F;usr&#x2F;local&#x2F;etc&#x2F;prometheus.yml    测试1浏览器打开: localhost:90">
+<meta property="og:type" content="article">
+<meta property="og:title" content="mac_prometheus">
+<meta property="og:url" content="http://yoursite.com/2020/12/30/mac_prometheus/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="安装方式安装地址 ：https:&#x2F;&#x2F;prometheus.io&#x2F;download&#x2F;  预编译的二进制文件 docker brew 源代码  安装1brew install prometheus  启动1brew services start prometheus  12# 默认配置文件地址&#x2F;usr&#x2F;local&#x2F;etc&#x2F;prometheus.yml    测试1浏览器打开: localhost:90">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-12-30T08:19:43.886Z">
+<meta property="article:modified_time" content="2020-12-30T08:19:43.886Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-mac_prometheus" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/12/30/mac_prometheus/" class="article-date">
+  <time datetime="2020-12-30T08:19:43.886Z" itemprop="datePublished">2020-12-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      mac_prometheus
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="安装方式"><a href="#安装方式" class="headerlink" title="安装方式"></a>安装方式</h2><p>安装地址 ：<a href="https://prometheus.io/download/" target="_blank" rel="noopener">https://prometheus.io/download/</a></p>
+<ul>
+<li>预编译的二进制文件</li>
+<li>docker</li>
+<li>brew</li>
+<li>源代码</li>
+</ul>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install prometheus</span><br></pre></td></tr></table></figure>
+
+<h2 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew services start prometheus</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 默认配置文件地址</span></span><br><span class="line">/usr/<span class="built_in">local</span>/etc/prometheus.yml</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">浏览器打开: localhost:9090</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="结合-node-exporter-机器指标导出器"><a href="#结合-node-exporter-机器指标导出器" class="headerlink" title="结合 node_exporter (机器指标导出器)"></a>结合 node_exporter (机器指标导出器)</h2><h3 id="安装-node-exporter"><a href="#安装-node-exporter" class="headerlink" title="安装 node_exporter"></a>安装 node_exporter</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install node_exporter</span><br></pre></td></tr></table></figure>
+
+<h3 id="启动-1"><a href="#启动-1" class="headerlink" title="启动"></a>启动</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew services start node_exporter</span><br></pre></td></tr></table></figure>
+
+<h3 id="测试-1"><a href="#测试-1" class="headerlink" title="测试"></a>测试</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">浏览器打开:localhost:9100</span><br></pre></td></tr></table></figure>
+
+<h3 id="prometheus-集成-node-exporter"><a href="#prometheus-集成-node-exporter" class="headerlink" title="prometheus 集成 node_exporter"></a>prometheus 集成 node_exporter</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">vim /usr/<span class="built_in">local</span>/etc/prometheus.yml</span><br><span class="line"></span><br><span class="line"><span class="comment"># 加入如下配置项 采集node exporter监控数据</span></span><br><span class="line">  - job_name: <span class="string">"node_exporter"</span></span><br><span class="line">    static_configs:</span><br><span class="line">    - targets: [<span class="string">"localhost:9100"</span>]</span><br></pre></td></tr></table></figure>
+
+<h3 id="重启prometheus"><a href="#重启prometheus" class="headerlink" title="重启prometheus"></a>重启prometheus</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew services restart prometheus</span><br></pre></td></tr></table></figure>
+
+<p>稍过几秒, prometheus 可视化可以看到收集到的机器节点信息</p>
+<h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看brew service 状态</span></span><br><span class="line">brew services list</span><br><span class="line"></span><br><span class="line"><span class="comment"># 停止 node_exporter service</span></span><br><span class="line">brew services stop node_exporter</span><br></pre></td></tr></table></figure>
+
+
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/12/30/mac_prometheus/" data-id="ckjb5fdk2000225n274kf2dxz" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/12/30/mac_grafana/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          mac_grafana
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/12/30/spring_boot_prometheus_grafana/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">spring_boot_prometheus_grafana</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/12/30/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/30/mac_grafana/">mac_grafana</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/30/mac_prometheus/">mac_prometheus</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/30/spring_boot_prometheus_grafana/">spring_boot_prometheus_grafana</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
